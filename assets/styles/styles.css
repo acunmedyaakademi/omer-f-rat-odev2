@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  accent-color: #0C7D69;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Karla", sans-serif;
+  background-color: #E0F1E8;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 736px;
+  background-color: #FFFFFF;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 128px;
+  border-radius: 16px;
+  border: none;
+}
+
+.last {
+  display: flex;
+  gap: 16px;
+  font-size: 24px;
+}
+
+.mail {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+#email,
+#ad,
+#soyad {
+  padding: 12px 24px;
+  margin-top: 8px;
+  border: 1px solid #86A2A5;
+  width: 100%;
+  outline: none;
+}
+
+#email:hover,
+#ad:hover,
+#soyad:hover {
+  border: 1px solid #0C7D69;
+}
+
+#sorgu1,
+#sorgu2,
+#mesaj {
+  border: 1px solid #86A2A5;
+  outline: none;
+}
+
+.sorgu {
+  font-size: 24px;
+}
+
+input {
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid #86A2A5;
+}
+
+#sorgu-flex {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.radio1 {
+  padding: 12px 24px;
+  border: 1px solid #86A2A5;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 18px;
+}
+
+#sorgu-flex label {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio1 input {
+  width: 24px;
+  height: 24px;
+}
+
+.mesaj {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  font-size: 24px;
+}
+
+.mesaj #mesaj {
+  border: 1px solid #86A2A5;
+  border-radius: 8px;
+}
+
+.onay {
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+}
+
+.onay #onay {
+  width: 24px;
+  height: 24px;
+}
+
+.submit input {
+  width: 100%;
+  background-color: #0C7D69;
+  color: #FFFFFF;
+  padding: 16px 0;
+  font-size: 27px;
+}
+
+#yildiz::after {
+  content: " *";
+  color: #f71a1a;
+}
+
+.mesaj #mesaj {
+  margin-top: 8px;
+  padding: 12px 24px;
+}
+
+.message-sent {
+  background-color: #2A4144;
+  width: 450px;
+  border-radius: 8px;
+  color: #E0F1E8;
+  padding: 24px;
+  position: absolute;
+  top: 24px;
+
+}
+
+.message-sent h3 {
+  display: flex;
+  margin-bottom: 8px;
+  gap: 8px;
+  color: #FFFFFF;
+}
+
+#hata-mesaji-adi,
+#hata-mesaji-soyadi,
+#hata-mesaji-sorgu,
+#hata-mesaji-email,
+#hata-mesaji-mesaj,
+#hata-mesaji-check {
+  font-size: 16px;
+  color: #D73C3C;
+}
+
+#genel,
+#destek {
+  display: none;
+}
+
+.cikti {
+  background-color: #2A4144;
+  display: none;
+  justify-content: center;
+  width: 736px;
+  gap: 25px;
+}
+
+.cikti span {
+  background-color: #0C7D69;
+  padding: 0 15px;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+@media (width <=375px) {
+  form {
+    width: 343px;
+    padding: 24px;
+  }
+
+  .last {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sorgu-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message-sent {
+    width: 327px;
+  }
+}
