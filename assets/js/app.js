@@ -56,6 +56,7 @@ function kontrol(e) {
     messageSent.style.display = "flex";
     hataMesaji1.innerText = "Lütfen Adınızı Giriniz.";
     adi.style.border = "1px solid #D73C3C";
+    
   } else {
     messageSent.style.display = "none";
     hataMesaji1.innerText = "";

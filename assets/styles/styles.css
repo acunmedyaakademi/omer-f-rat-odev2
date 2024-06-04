@@ -198,7 +198,8 @@ input {
   padding: 24px;
   position: absolute;
   top: 24px;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .message-sent h3 {
