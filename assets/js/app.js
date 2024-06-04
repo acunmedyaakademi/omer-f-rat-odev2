@@ -25,6 +25,16 @@ function handleFormClick(e) {
   emailText.innerText = email.value;
   mesajText.innerText = mesaj.value;
 
+  if (
+    adi.value == "" &&
+    soyadi.value == "" &&
+    email.value == "" &&
+    mesaj.value == "" &&
+    sorgu1.checked === false &&
+    sorgu2.checked === false &&
+    onay.checked === false 
+  )
+
   if (sorgu1.checked === true) {
     sorguText.innerText = "Genel"
   } else {
@@ -43,33 +53,41 @@ submit.addEventListener("click", handleFormClick);
 function kontrol(e) {
   e.preventDefault();
   if (adi.value == "") {
+    messageSent.style.display = "flex";
     hataMesaji1.innerText = "Lütfen Adınızı Giriniz.";
     adi.style.border = "1px solid #D73C3C";
   } else {
+    messageSent.style.display = "none";
     hataMesaji1.innerText = "";
     adi.style.border = "1px solid #86A2A5";
   }
 
   if (soyadi.value == "") {
+    messageSent.style.display = "flex";
     hataMesaji2.innerText = "Lütfen Soyadınızı Giriniz.";
     soyadi.style.border = "1px solid #D73C3C";
   } else {
+    messageSent.style.display = "none";
     hataMesaji2.innerText = "";
     soyadi.style.border = "1px solid #86A2A5";
   }
 
   if (email.value == "") {
+    messageSent.style.display = "flex";
     hataMesaji3.innerText = "Lütfen E-posta Adresinizi Giriniz.";
     email.style.border = "1px solid #D73C3C";
   } else {
+    messageSent.style.display = "none";
     hataMesaji3.innerText = "";
     email.style.border = "1px solid #86A2A5";
   }
 
   if (mesaj.value == "") {
+    messageSent.style.display = "flex";
     hataMesaji4.innerText = "Lütfen Mesajınızı giriniz.";
     mesaj.style.border = "1px solid #D73C3C";
   } else {
+    messageSent.style.display = "none";
     hataMesaji4.innerText = "";
     mesaj.style.border = "1px solid #86A2A5";
   }
@@ -85,16 +103,20 @@ function kontrol(e) {
   }
 
   if (secenekSecildi) {
+    messageSent.style.display = "flex";
     hataMesaji5.innerText = "";
   } else {
+    messageSent.style.display = "none";
     hataMesaji5.innerText = "Lütfen bir seçenek seçiniz.";
   }
   if (onay.checked) {
+    messageSent.style.display = "flex";
     hataMesaji6.innerText = "";
   } else {
+    messageSent.style.display = "none";
     hataMesaji6.innerText = "Lütfen bu seçeneği işaretleyiniz.";
   }
-
+  
 }
 
 
