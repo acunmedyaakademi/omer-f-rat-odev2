@@ -133,6 +133,9 @@ input {
   width: 100%;
   font-size: 18px;
 }
+.radio1::selection{
+  color: #0C7D69;
+}
 
 #sorgu-flex label {
   display: flex;
